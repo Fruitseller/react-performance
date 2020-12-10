@@ -5,6 +5,7 @@ import * as React from 'react'
 function CountButton({count, onClick}) {
   return <button onClick={onClick}>{count}</button>
 }
+CountButton = React.memo(CountButton)
 
 function NameInput({name, onNameChange}) {
   return (
@@ -13,6 +14,8 @@ function NameInput({name, onNameChange}) {
     </label>
   )
 }
+
+NameInput = React.memo(NameInput)
 
 function Example() {
   const [name, setName] = React.useState('')
